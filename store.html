@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images\ء.png" type="image/x-icon">
+    <title>xmzio</title>
+</head>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">xmzio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="home.html">الصفحة الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="store.html">المتجر</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            خدمتنا
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">قريبا</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<body>
+    <div class="card-group">
+      <div class="card">
+        <img src="images\أنشاء موقع باستخدام html css.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">انشاء موقع باستخدام html css </h5>
+          <p class="card-text">انشاء موقع باستخدام html css ب30$</p>
+          <div id="smart-button-container">
+            <div style="text-align: center;">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+        <script src="https://www.paypal.com/sdk/js?client-id=Ac5YDY5b5uveI_gGfw8KlIIaVft2e6Jp_XS0NQvZz8wItd_lrrkX_BlvMDojLFLO3URSGEa7RMWpTjw6&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+        <script>
+          function initPayPalButton() {
+            paypal.Buttons({
+              style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+                
+              },
+      
+              createOrder: function(data, actions) {
+                return actions.order.create({
+                  purchase_units: [{"description":"شراء الخدمة","amount":{"currency_code":"USD","value":30.3,"breakdown":{"item_total":{"currency_code":"USD","value":30},"shipping":{"currency_code":"USD","value":0},"tax_total":{"currency_code":"USD","value":0.3}}}}]
+                });
+              },
+      
+              onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+                  
+                  // Full available details
+                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+      
+                  // Show a success message within this page, e.g.
+                  const element = document.getElementById('paypal-button-container');
+                  element.innerHTML = 'pay.html';
+                  element.innerHTML = '<h3>تم الشراء</h3>';
+      
+                  // Or go to another URL:  actions.redirect('thank_you.html');
+                  
+                });
+              },
+      
+              onError: function(err) {
+                console.log(err);
+              }
+            }).render('#paypal-button-container');
+          }
+          initPayPalButton();
+        </script>
+        </div>
+
+      </div> 
+      
+      <div class="card">
+        <img src="images\انشاء سيرفر ديسكورد.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">انشاء سيرفر ديسكورد
+            </h5>
+          <p class="card-text">ب5$</p>
+          <div id="smart-button-container">
+            <div style="text-align: center;">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+          <div id="smart-button-container">
+            <div style="text-align: center;">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+        <script src="https://www.paypal.com/sdk/js?client-id=Ac5YDY5b5uveI_gGfw8KlIIaVft2e6Jp_XS0NQvZz8wItd_lrrkX_BlvMDojLFLO3URSGEa7RMWpTjw6&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+        <script>
+          function initPayPalButton() {
+            paypal.Buttons({
+              style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+                
+              },
+      
+              createOrder: function(data, actions) {
+                return actions.order.create({
+                  purchase_units: [{"description":"انشاء سيرفر ديسكورد\nب5$","amount":{"currency_code":"USD","value":5}}]
+                });
+              },
+      
+              onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+                  
+                  // Full available details
+                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+      
+                  // Show a success message within this page, e.g.
+                  const element = document.getElementById('paypal-button-container');
+                  element.innerHTML = 'pay.html';
+                  element.innerHTML = '<h3>شكرا لشرائك</h3>';
+      
+                  // Or go to another URL:  actions.redirect('thank_you.html');
+                  
+                });
+              },
+      
+              onError: function(err) {
+                console.log(err);
+              }
+            }).render('#paypal-button-container');
+          }
+          initPayPalButton();
+        </script>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <div id="smart-button-container">
+            <div style="text-align: center;">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+        <script src="https://www.paypal.com/sdk/js?client-id=Ac5YDY5b5uveI_gGfw8KlIIaVft2e6Jp_XS0NQvZz8wItd_lrrkX_BlvMDojLFLO3URSGEa7RMWpTjw6&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+        <script>
+          function initPayPalButton() {
+            paypal.Buttons({
+              style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+                
+              },
+      
+              createOrder: function(data, actions) {
+                return actions.order.create({
+                  purchase_units: [{"description":"شراء الخدمة","amount":{"currency_code":"USD","value":30.3,"breakdown":{"item_total":{"currency_code":"USD","value":30},"shipping":{"currency_code":"USD","value":0},"tax_total":{"currency_code":"USD","value":0.3}}}}]
+                });
+              },
+      
+              onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+                  
+                  // Full available details
+                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+      
+                  // Show a success message within this page, e.g.
+                  const element = document.getElementById('paypal-button-container');
+                  element.innerHTML = 'pay.html';
+                  element.innerHTML = '<h3>Thank you for your payment!</h3>';
+      
+                  // Or go to another URL:  actions.redirect('thank_you.html');
+                  
+                });
+              },
+      
+              onError: function(err) {
+                console.log(err);
+              }
+            }).render('#paypal-button-container');
+          }
+          initPayPalButton();
+        </script>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
